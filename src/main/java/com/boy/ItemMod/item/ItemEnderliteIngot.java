@@ -27,9 +27,14 @@ public class ItemEnderliteIngot extends Item {
             return InteractionResultHolder.pass(stack);
         }
 
-        // 効果の付与はサーバー側だけで行う
+        // 効果の付与と消費はサーバー側だけで行う
         if (!world.isClientSide) {
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, SLOW_FALLING_DURATION, 0));
+
+            // クリエイティブモード以外なら1個消費する(使い捨て)
+            if (!player.getAbilities().instabuild) {
+                stack.shrink(1);
+            }
         }
         return InteractionResultHolder.sidedSuccess(stack, world.isClientSide);
     }
