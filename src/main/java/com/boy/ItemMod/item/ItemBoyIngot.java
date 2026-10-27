@@ -22,7 +22,7 @@ public class ItemBoyIngot extends Item {
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (stack.is(ItemModTags.Items.BOY_SERIES)) {
-            player.addEffect(new MobEffectInstance((MobEffects.JUMP), 20*60*3, 0));
+            player.addEffect(new MobEffectInstance((MobEffects.JUMP), 20*60*3, 6));
         } else {
             player.addEffect(new MobEffectInstance((MobEffects.DARKNESS), 20*60*3, 0));
         }
