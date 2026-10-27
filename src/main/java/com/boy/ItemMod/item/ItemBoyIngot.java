@@ -11,8 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class ItemBoyIngot extends Item {
-    public ItemBoyIngot(Properties p_41383_) {
-        super(new Properties()
+    public ItemBoyIngot(Properties properties) {
+        super(properties
                 .fireResistant()
                 .stacksTo(64)
         );
