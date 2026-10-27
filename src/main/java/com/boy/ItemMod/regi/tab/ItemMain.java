@@ -8,6 +8,7 @@ public class ItemMain {
     public static final Item[] items = {
             ItemModItems.BOY_INGOT.get(),
             ItemModItems.ENDERLITE_INGOT.get(),
+            ItemModItems.BOY_BOSS_SPAWN_EGG.get(),
     };
 
 }

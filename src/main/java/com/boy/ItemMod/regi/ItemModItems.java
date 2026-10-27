@@ -4,6 +4,7 @@ import com.boy.ItemMod.main.ItemMod;
 import com.boy.ItemMod.item.ItemBoyIngot;
 import com.boy.ItemMod.item.ItemEnderliteIngot;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -16,4 +17,8 @@ public class ItemModItems {
 
     // 空中で右クリックすると落下速度ダウン
     public static final RegistryObject<Item> ENDERLITE_INGOT = ITEMS.register("enderlite_ingot", () -> new ItemEnderliteIngot(new Item.Properties()));
+
+    // ボーイボスのスポーンエッグ(卵の色は 紫 と 赤)
+    public static final RegistryObject<Item> BOY_BOSS_SPAWN_EGG = ITEMS.register("boy_boss_spawn_egg",
+            () -> new ForgeSpawnEggItem(ItemModEntities.BOY_BOSS, 0x4B1E6E, 0xFF2828, new Item.Properties()));
 }

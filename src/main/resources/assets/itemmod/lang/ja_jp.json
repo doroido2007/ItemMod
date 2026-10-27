@@ -2,5 +2,8 @@
   "itemGroup.item_main" : "itemmod(仮)",
 
   "item.itemmod.boy_ingot" : "ボーイインゴット",
-  "item.itemmod.enderlite_ingot" : "エンダライトインゴット"
+  "item.itemmod.enderlite_ingot" : "エンダライトインゴット",
+  "item.itemmod.boy_boss_spawn_egg" : "ボーイボスのスポーンエッグ",
+
+  "entity.itemmod.boy_boss" : "ボーイボス"
 }
