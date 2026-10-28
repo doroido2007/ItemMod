@@ -9,11 +9,16 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-/** ゾンビと同じ人型モデルを1.5倍にして、独自テクスチャで表示する */
+/**
+ * ゾンビと同じ人型モデルを、独自テクスチャで表示する。
+ * 通常はゾンビの1.5倍、復活後(第三形態)はさらにその1.5倍になり、テクスチャも変わる。
+ */
 public class BoyBossRenderer extends HumanoidMobRenderer<BoyBossEntity, HumanoidModel<BoyBossEntity>> {
 
     private static final ResourceLocation TEXTURE =
             ResourceLocation.fromNamespaceAndPath(ItemMod.MOD_ID, "textures/entity/boy_boss.png");
+    private static final ResourceLocation TEXTURE_THIRD =
+            ResourceLocation.fromNamespaceAndPath(ItemMod.MOD_ID, "textures/entity/boy_boss_third.png");
 
     private static final float SCALE = 1.5F;
 
@@ -23,11 +28,13 @@ public class BoyBossRenderer extends HumanoidMobRenderer<BoyBossEntity, Humanoid
 
     @Override
     protected void scale(BoyBossEntity entity, PoseStack poseStack, float partialTick) {
-        poseStack.scale(SCALE, SCALE, SCALE);
+        float scale = entity.isRevived() ? SCALE * BoyBossEntity.THIRD_FORM_SCALE : SCALE;
+        this.shadowRadius = 0.5F * scale; // 影の大きさも合わせる
+        poseStack.scale(scale, scale, scale);
     }
 
     @Override
     public ResourceLocation getTextureLocation(BoyBossEntity entity) {
-        return TEXTURE;
+        return entity.isRevived() ? TEXTURE_THIRD : TEXTURE;
     }
 }
