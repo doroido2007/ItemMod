@@ -1,6 +1,7 @@
 package com.boy.ItemMod.main;
 
 import com.boy.ItemMod.regi.tab.ItemModTabs;
+import com.boy.ItemMod.regi.ItemModBlocks;
 import com.boy.ItemMod.regi.ItemModEntities;
 import com.boy.ItemMod.regi.ItemModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,7 @@ public class ItemMod {
 
     public ItemMod(FMLJavaModLoadingContext context) {
         IEventBus bus = context.getModEventBus();
+        ItemModBlocks.BLOCKS.register(bus);
         ItemModItems.ITEMS.register(bus);
         ItemModEntities.ENTITIES.register(bus);
         ItemModTabs.MOD_TABS.register(bus);

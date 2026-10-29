@@ -4,6 +4,10 @@
   "item.itemmod.boy_ingot" : "ボーイインゴット",
   "item.itemmod.enderlite_ingot" : "エンダライトインゴット",
   "item.itemmod.boy_boss_spawn_egg" : "ボーイボスのスポーンエッグ",
+  "item.itemmod.boy_sword" : "ボーイソード",
+  "item.itemmod.boy_pickaxe" : "ボーイピッケル",
+
+  "block.itemmod.boy_block" : "ボーイブロック",
 
   "entity.itemmod.boy_boss" : "ボーイボス"
 }
