@@ -10,5 +10,5 @@
     "I": { "item": "itemmod:boy_ingot" },
     "S": { "item": "minecraft:stick" }
   },
-  "result": { "item": "itemmod:boy_pickaxe" }
+  "result": { "item": "itemmod:boy_sword" }
 }
