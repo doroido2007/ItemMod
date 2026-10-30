@@ -25,9 +25,9 @@ public class ItemModItems {
     public static final RegistryObject<Item> BOY_BOSS_SPAWN_EGG = ITEMS.register("boy_boss_spawn_egg",
             () -> new ForgeSpawnEggItem(ItemModEntities.BOY_BOSS, 0x4B1E6E, 0xFF2828, new Item.Properties()));
 
-    // ボーイソード(攻撃力は 3 + Tier ボーナス 2.5 + 素手 1、攻撃速度は標準の剣と同じ)
+    // ボーイソード(攻撃力は 12 + Tier ボーナス 2.5 + 素手 1、攻撃速度は標準の剣と同じ)
     public static final RegistryObject<Item> BOY_SWORD = ITEMS.register("boy_sword",
-            () -> new SwordItem(ItemModTiers.BOY, 3, -2.4F, new Item.Properties()));
+            () -> new SwordItem(ItemModTiers.BOY, 12, -2.4F, new Item.Properties()));
 
     // ボーイピッケル(攻撃速度は標準のピッケルと同じ)
     public static final RegistryObject<Item> BOY_PICKAXE = ITEMS.register("boy_pickaxe",
